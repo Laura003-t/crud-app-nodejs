@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		myOrganizer
+	</title>
+	<link rel="icon" type="image/x-icon" href="/images/myOrganizer/Asset 1.svg">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/myOrganizer.css">
+    <script src="/javascripts/myOrganizer.js"></script>
+</head>
+<body class="body1">
+	<div class="text" id="myLandingPg">
+	<h1 class="h1"><img src="/images/myOrganizer/Asset 1.svg" align="middle" height="100" width="140">myOrganizer</h1>
+	<b class="b1"> Welcome!</b>
+	<br><br>
+	<p><a class="button" onclick="login()">GET STARTED</a></p>
+	</div>
+
+	<div id="myLoginPg" class="myLoginPg">
+		<div id="loginContents" class="hide">
+			<center><h2 class="heading">myOrganizer</h2>
+			<p class="size">Welcome back!</p></center><br>
+			<div class="login">
+			<form method="post" action="/myorganizer/login">
+				<input class="textbox username" type="text" id="user0" name="user0" placeholder="Username"><br><br>
+				<input class="textbox password" type="password" id="password" name="passwrd" placeholder="Password"><br>
+				<a class="link" onclick="resetPassword()">Forgot password?</a><br><br>
+				<center><button type="submit" class="btnLogin">LOGIN</button></center>
+				</div>
+				<center class="positionOR">OR</center>
+				<center><a class="btnGoogle"><img src="/images/myOrganizer/icons8-google-48.png">Login with Google</a>
+				<a class="btnFacebook"><img src="/images/myOrganizer/icons8-facebook-24.png">Login with Facebook</a></center>
+				<center><p>Don't have an account yet? <a class="signUpLink" onclick="signUp()">Sign up</a></p></center>
+			</form>
+		</div>
+
+		<div class="resetPass" id="resetPass">
+			<center><h2 class="resetHead"><b class="big">FORGOT</b> <b>PASSWORD?</b></h2>
+			<p>We can send you an e-mail to reset it.</p></center><br>
+			<form method="post" action="/businessplanner/login/resetpass">
+				<input class="textbox email" type="email" id="emailR" placeholder="Enter your e-mail"><br><br>
+				<input class="textbox username" type="text" id="userR" placeholder="Enter your username"><br><br><br>
+				<center><a class="btnLogin" id="sendemail" onclick="reqFail()">SIGN UP</a></center>
+				<center><button type="submit" class="btnLogin" id="sendemaill" style="display: none">SIGN UP</button></center>
+			</form>
+			<center><p class="resize">Have you remembered your password? Back to <a class="signUpLink" onclick="backToLogin()">Login</a></p></center>
+		</div>
+
+		<div class="signUp" id="signUp">
+			<center><h2 class="heading">myOrganizer</h2></center>
+			<div class="signup">
+			<center><p class="size">Create your account.</p></center>
+			<form method="post" action="/myorganizer/signingup">
+				<input class="textbox email" type="email" id="email" name="email" placeholder="Enter your e-mail"><br><br>
+				<input class="textbox username" type="text" id="newUser" name="newUser" placeholder="Choose a username"><br><br>
+				<input class="textbox password" type="password" id="newPassword" name="newPassword" placeholder="Choose a password"><br>
+				<i style="font-size: 0.9vw" id="lblPassword">Passwords are case sensitive</i><br>
+				<input class="textbox password" type="password" id="confirmedPassword" placeholder="Confirm password"><br>
+				<i style="font-size: 0.9vw" id="label">Password must be exactly 8 characters, must contain at least one uppercase letter, lowercase letter, number and special character</i><br><br>
+				<center><a class="btnLogin" id="signup" onclick="regFail()">SIGN UP</a></center>
+				<center><button type="submit" class="btnLogin" id="signupp" style="display: none">SIGN UP</button></center>
+			</form>
+			<center><p>Already have an account? <a class="signUpLink" onclick="backToLogin()">Log in</a></p></center>
+			</div>
+		</div>
+	</div>
+	<script>
+		setInterval(verifySignUpBtn, 1);
+	</script>
+</body>
+</html>

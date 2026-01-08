@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Get Started!
+	</title>
+	<link rel="icon" type="image/x-icon" href="/images/myOrganizer/Asset 1.svg">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/myOrganizer.css">
+	<script src="/javascripts/myOrganizer.js"></script>
+</head>
+<body class="body1">
+	<div class="text" style="opacity: 0.2" id="myLandingPg">
+	<h1 class="h1"><img src="/images/myOrganizer/Asset 1.svg" height="100" width="140">myOrganizer</h1>
+	<b class="b1"> Welcome!</b>
+	<br><br>
+	<p><a class="button">GET STARTED</a></p>
+	</div>
+
+	<div id="myLoginPg2" class="myLoginPg2">
+
+		<div id="signUp2" class="signUp2">
+			<center><h2 class="heading">myOrganizer</h2></center>
+			<div class="signup">
+			<center><p class="size">Create your account.</p></center>
+			<form method="post" action="/myorganizer/signingup">
+				<input class="textbox email" type="text" id="email" name="email" placeholder="Enter your e-mail"><br><br>
+				<input class="textbox username" type="text" id="newUser" name="newUser" placeholder="Choose a username"><br><br>
+				<input class="textbox password" type="password" id="newPassword" name="newPassword" placeholder="Choose a password"><br>
+				<i style="font-size: 0.9vw" id="lblPassword">Passwords are case sensitive</i><br>
+				<input class="textbox password" type="password" id="confirmedPassword" placeholder="Confirm password"><br>
+				<i style="font-size: 0.9vw" id="label">Password must be exactly 8 characters, must contain at least one uppercase letter, lowercase letter, number and special character</i><br><br>
+				<center><a class="btnLogin" id="signup" onclick="regFail()">SIGN UP</a></center>
+				<center><button type="submit" class="btnLogin" id="signupp" style="display: none">SIGN UP</button></center>
+			</form>
+			<center><p>Already have an account? <a class="signUpLink" href="Grocery Bud Home Page.html">Go back to Home Page</a></p></center>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	function showbg() {
+		document.getElementById("myLoginPg2").style.height = "80vh";
+		document.getElementById("myLoginPg2").style.width = "70vh";
+	}
+	setTimeout(showbg, 250);
+	function show() {
+		document.getElementById("signUp2").style.display = "block";
+	}
+	setTimeout(show, 960);
+	setInterval(verifySignUpBtn, 1);
+	</script>
+</html>
